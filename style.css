@@ -1,0 +1,851 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f8f8f5;
+    color: #1b3048;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 85px;
+    width: 100%;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    color: #1b3048;
+}
+
+.logo span {
+    color: #4385c9;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #596a7c;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3984d3;
+}
+
+.nav-button {
+    padding: 13px 20px;
+    background: #1b3048;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #3984d3;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    color: #1b3048;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    min-height: 670px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    overflow: hidden;
+    background: #f8f8f5;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-label,
+.section-label {
+    display: inline-block;
+    color: #4784c4;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
+}
+
+.hero-label {
+    background: #e9f0f8;
+    padding: 11px 16px;
+    border-radius: 30px;
+}
+
+.hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(44px, 5vw, 72px);
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+    color: #1b3048;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #4284cb;
+}
+
+.hero-description {
+    max-width: 550px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #68798b;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    background: #1b3048;
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background: #4385cb;
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    color: #1b3048;
+    border: 1px solid #cbd5df;
+}
+
+.secondary-button:hover {
+    background: #e9eef3;
+    transform: translateY(-2px);
+}
+
+.hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-top: 32px;
+}
+
+.hero-trust span {
+    font-size: 12px;
+    color: #758396;
+}
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual {
+    flex: 1;
+    max-width: 510px;
+    min-width: 350px;
+    position: relative;
+}
+
+.visual-background {
+    width: 420px;
+    height: 420px;
+    background: #dceaf7;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.construction-card {
+    position: relative;
+    z-index: 1;
+    background: #1b3048;
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 430px;
+    min-height: 445px;
+    margin: auto;
+    box-shadow: 0 25px 60px rgba(27, 48, 72, 0.17);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #b7c9dd;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.card-header span:last-child {
+    font-size: 24px;
+    color: #78b5f5;
+}
+
+.construction-card h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    line-height: 1.1;
+    margin-top: 30px;
+    letter-spacing: -1px;
+}
+
+.construction-card > p {
+    color: #b8c8da;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 13px 0 23px;
+}
+
+/* CANDIDATE CARDS */
+
+.candidate-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    color: #1b3048;
+    padding: 13px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.candidate-avatar {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #e4edf9;
+    color: #3779bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.avatar-blue {
+    background: #e1eaf2;
+    color: #54718e;
+}
+
+.avatar-orange {
+    background: #f4e8dc;
+    color: #b77948;
+}
+
+.candidate-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.candidate-info strong {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.candidate-info span {
+    font-size: 10px;
+    color: #8290a0;
+}
+
+.check {
+    color: #4284cb;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #a6bbd2;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+/* FLOATING BOX */
+
+.floating-box {
+    position: absolute;
+    z-index: 2;
+    bottom: -22px;
+    left: -25px;
+    background: white;
+    padding: 18px 23px;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0 12px 35px rgba(27, 48, 72, 0.12);
+}
+
+.floating-box strong {
+    font-size: 17px;
+    color: #1b3048;
+}
+
+.floating-box span {
+    font-size: 12px;
+    color: #78889a;
+}
+
+/* ================= INTRO SECTION ================= */
+
+.intro-section {
+    padding: 100px 8%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.intro-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 43px;
+    max-width: 800px;
+    margin: 0 auto 22px;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+.intro-section p {
+    max-width: 720px;
+    margin: auto;
+    font-size: 16px;
+    color: #718093;
+    line-height: 1.9;
+}
+
+.text-link {
+    display: inline-block;
+    color: #3984d3;
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* ================= CHALLENGES ================= */
+
+.challenges-section {
+    padding: 100px 8%;
+    background: #f8f8f5;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 43px;
+    letter-spacing: -1.5px;
+    max-width: 700px;
+    line-height: 1.2;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.challenge-card {
+    background: #ffffff;
+    padding: 32px;
+    border: 1px solid #edf0f2;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.challenge-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(27, 48, 72, 0.06);
+}
+
+.number {
+    display: block;
+    color: #4385cb;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.challenge-card h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.challenge-card p {
+    color: #718093;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ================= SERVICES ================= */
+
+.services-section {
+    padding: 100px 8%;
+    background: #ffffff;
+}
+
+.services-section .section-heading p {
+    color: #718093;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-top: 15px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid #e8edf1;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    background: #f8fafc;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(27, 48, 72, 0.06);
+}
+
+.service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #e9f2fc;
+    color: #4385cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #718093;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ================= ROLES ================= */
+
+.roles-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 100px 8%;
+    background: #f8f8f5;
+}
+
+.roles-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.roles-content h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 42px;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.roles-content p {
+    color: #718093;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.roles-list {
+    flex: 1;
+    max-width: 550px;
+}
+
+.role-item {
+    padding: 17px 5px;
+    border-bottom: 1px solid #dce3e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1b3048;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.role-item span {
+    color: #4385cb;
+    transition: 0.3s;
+}
+
+.role-item:hover {
+    padding-left: 12px;
+    color: #4385cb;
+}
+
+/* ================= CTA ================= */
+
+.cta-section {
+    text-align: center;
+    padding: 100px 8%;
+    background: #1b3048;
+    color: #ffffff;
+}
+
+.cta-section .section-label {
+    color: #8ebef3;
+}
+
+.cta-section h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(34px, 4vw, 55px);
+    line-height: 1.2;
+    letterletter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    color: #b8c8da;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.cta-section .primary-button {
+    background: #6da9e8;
+    color: #142c45;
+}
+
+.cta-section .primary-button:hover {
+    background: #ffffff;
+}
+
+.cta-section .secondary-button {
+    color: #ffffff;
+    border-color: #52677d;
+}
+
+.cta-section .secondary-button:hover {
+    background: #29435f;
+}
+
+.cta-trust {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #a8bbd0;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 45px 8%;
+    background: #12263c;
+    color: #ffffff;
+}
+
+.footer .logo {
+    color: #ffffff;
+}
+
+.footer p {
+    color: #aebfd0;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: #c0cede;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #78b5f5;
+}
+
+.copyright {
+    border-top: 1px solid #31465c;
+    padding-top: 20px;
+    color: #91a4b8;
+    font-size: 12px;
+}
+
+/* ================= ANIMATION ================= */
+
+.hero-content,
+.hero-visual {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-content.show,
+.hero-visual.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1050px) {
+
+    .hero {
+        gap: 35px;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .hero-visual {
+        transform: scale(0.9);
+    }
+
+    .challenge-grid,
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .roles-section {
+        gap: 40px;
+    }
+}
+
+/* TABLET / MOBILE NAV */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 75px;
+        padding: 0 6%;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 25px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 65px 6%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 500px;
+        min-width: 0;
+        margin: 25px auto 40px;
+        transform: none;
+    }
+
+    .visual-background {
+        width: 350px;
+        height: 350px;
+    }
+
+    .roles-section {
+        flex-direction: column;
+    }
+
+    .roles-content,
+    .roles-list {
+        max-width: 100%;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 550px) {
+
+    .hero {
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-trust {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-visual {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .construction-card {
+        padding: 22px;
+        min-height: 420px;
+    }
+
+    .construction-card h2 {
+        font-size: 35px;
+    }
+
+    .visual-background {
+        width: 290px;
+        height: 290px;
+    }
+
+    .floating-box {
+        left: -5px;
+        bottom: -20px;
+        padding: 15px 18px;
+    }
+
+    .intro-section,
+    .challenges-section,
+    .services-section,
+    .roles-section,
+    .cta-section {
+        padding: 70px 6%;
+    }
+
+    .intro-section h2,
+    .section-heading h2,
+    .roles-content h2 {
+        font-size: 34px;
+    }
+
+    .challenge-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .challenge-card,
+    .service-card {
+        padding: 25px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
